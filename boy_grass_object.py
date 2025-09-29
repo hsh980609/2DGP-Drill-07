@@ -49,6 +49,7 @@ class Ball_S:
         self.x, self.y =random.randint(100,700),random.randint(200,500)
 
     def draw(self):
+        self.img.clip_draw(0,0,21,21,self.x,self.y)
         pass
     def update(self):
         pass
@@ -58,6 +59,7 @@ class Ball_B:
         self.img = load_image("ball41x41.png")
         self.x, self.y = random.randint(100, 700), random.randint(200, 500)
     def draw(self):
+        self.img.clip_draw(0,0,41,41,self.x,self.y)
         pass
     def update(self):
         pass
@@ -91,6 +93,12 @@ def reset_world():
 
     zombie = Zombie()
     world.append(zombie)
+
+    #Ball을 world에 추가
+    ball_s = Ball_S()
+    world.append(ball_s)
+    ball_b = Ball_B()
+    world.append(ball_b)
 
 
 def update_world():
