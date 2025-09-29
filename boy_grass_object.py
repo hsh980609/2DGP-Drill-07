@@ -44,8 +44,14 @@ class Zombie:
 
 
 class Ball_S:
+    def __init__(self):
+        self.img = load_image("ball21x21.png")
+        self.x, self.y =random.randint(100,700),random.randint(200,500)
     pass
 class Ball_B:
+    def __init__(self):
+        self.img = load_image("ball41x41.png")
+        self.x, self.y = random.randint(100, 700), random.randint(200, 500)
     pass
 
 
