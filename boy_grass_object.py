@@ -101,10 +101,12 @@ def reset_world():
     world.append(zombie)
 
     ball_types = [Ball_S, Ball_B]
-    for i in range(20):
-        chose_ball_type = random.choice(ball_types)
-        ball = chose_ball_type()
-        world.append(ball)
+    # for i in range(20):
+    #     chose_ball_type = random.choice(ball_types)
+    #     ball = chose_ball_type()
+    #     world.append(ball)
+    balls = [random.choice(ball_types)() for i in range(20)]
+    world += balls
 
 
 def update_world():
