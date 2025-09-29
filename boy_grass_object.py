@@ -53,6 +53,8 @@ class Ball_S:
         pass
     def update(self):
         self.y -= random.randint(5, 20)
+        if (self.y < 60):
+            self.y = 60
         pass
 
 class Ball_B:
@@ -64,6 +66,8 @@ class Ball_B:
         pass
     def update(self):
         self.y -= random.randint(5, 20)
+        if(self.y < 60):
+            self.y = 60
         pass
 
 
