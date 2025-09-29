@@ -52,7 +52,7 @@ class Ball_S:
         self.img.clip_draw(0,0,21,21,self.x,self.y)
         pass
     def update(self):
-        self.y -= random.randint(5, 20)
+        self.y -= random.randint(1, 20)
         if (self.y < 60):
             self.y = 60
         pass
@@ -65,7 +65,7 @@ class Ball_B:
         self.img.clip_draw(0,0,41,41,self.x,self.y)
         pass
     def update(self):
-        self.y -= random.randint(5, 20)
+        self.y -= random.randint(1, 20)
         if(self.y < 60):
             self.y = 60
         pass
