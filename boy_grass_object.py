@@ -100,12 +100,6 @@ def reset_world():
     zombie = Zombie()
     world.append(zombie)
 
-    #Ball을 world에 추가
-    # ball_s = Ball_S()
-    # world.append(ball_s)
-    # ball_b = Ball_B()
-    # world.append(ball_b)
-
     ball_types = [Ball_S, Ball_B]
     for i in range(20):
         chose_ball_type = random.choice(ball_types)
