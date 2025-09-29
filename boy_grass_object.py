@@ -97,14 +97,12 @@ def reset_world():
     team = [Boy() for i in range(11)]
     world += team # 같은 리스트니까 더해서 추가 해준다.
 
+    # 좀비 1마리 월드에 추가
     zombie = Zombie()
     world.append(zombie)
 
+    # 공 20개를 만들고 월드에 추가, list comprehension 방식 사용
     ball_types = [Ball_S, Ball_B]
-    # for i in range(20):
-    #     chose_ball_type = random.choice(ball_types)
-    #     ball = chose_ball_type()
-    #     world.append(ball)
     balls = [random.choice(ball_types)() for i in range(20)]
     world += balls
 
