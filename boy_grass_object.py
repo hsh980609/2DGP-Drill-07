@@ -1,8 +1,6 @@
 from pico2d import *
 import random
 
-from prompt_toolkit.formatted_text import fragment_list_width
-
 
 class Grass:
     # 생성자함수 초기화수행
@@ -43,6 +41,13 @@ class Zombie:
     def update(self):
         self.x += 5
         self.frame = (self.frame +1) % 10
+
+
+class Ball_S:
+    pass
+class Ball_B:
+    pass
+
 
 def handle_events():
     global running
